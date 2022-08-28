@@ -58,7 +58,7 @@ flowchart LR
 ```
 
 ## Control Tools
-|Tool|Compatible Systems|Description|
-|-|-|-|
-|[Privileges](https://github.com/SAP/macOS-enterprise-privileges)|macOS|Stuff|
-|[MakeMeAdmin](https://github.com/pseymour/MakeMeAdmin)|Windows|Stuff|
+|Tool|Compatible Systems|
+|-|-|
+|[Privileges](https://github.com/SAP/macOS-enterprise-privileges)|macOS|
+|[MakeMeAdmin](https://github.com/pseymour/MakeMeAdmin)|Windows|
