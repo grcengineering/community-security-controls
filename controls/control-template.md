@@ -39,3 +39,22 @@ flowchart LR
 |Tool|Compatible Systems|
 |-|-|
 |[Tool Name](https://link.to.tool.lolol)|macOS, Windows, Linux, Android, iOS, Google Workspace, AWS, Azure, GCP, Okta|
+
+## Control Framework Mappings
+|Framework|Control ID(s)|
+|-|-|
+|SOX||
+|SOC 2 (SSAE 18)||
+|ISO 27001||
+|NIST CSF 1||
+|NIST CSF 2||
+|NIST 800-53||
+|FedRAMP||
+|PCI DSS||
+|HIPAA||
+|GDPR||
+|CCPA||
+|CIS||
+
+## References
+* *Link to articles and other sources that help provide context about this control*
