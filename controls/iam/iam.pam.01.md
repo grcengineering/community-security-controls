@@ -13,14 +13,14 @@ flowchart LR
     p(Process)
     pd(Protected Data)
 
-    at -->|1.1 delivers|m
-    at -->|2.1 remotely logs in with stolen credentials|aa
-    at -->|3.2 vulnerability exploitation|p
+    at -->|a.1 delivers|m
+    at -->|b.1 remotely logs in with stolen credentials|aa
+    at -->|c.2 vulnerability exploitation|p
 
     subgraph ide1 [Endpoint]
-        aa-->|1.2 launches|m
-        aa-->|2.2 launches|p
-        aa-->|3.1 launches|p
+        aa-->|a.2 launches|m
+        aa-->|b.2 launches|p
+        aa-->|c.1 launches|p
         p-->pd
         m-->pd
     end
@@ -34,7 +34,7 @@ flowchart LR
     style pd fill:#9bb8ff,stroke:#0035b3,stroke-width:2px,color:#000000
 ```
 
-## Control Overview
+## Control Context
 Implementing JITA for local admin access requires a user to intentionally request admin privileges before using them. After a set period of time, the user's privileges are downgraded. 
 
 This control is most beneficial for organizations that have a valid reason to provide some users with local admin access on their computers. By making local admin access temporary and only granted upon request, this control helps minimize the impact of an attacker exploiting vulnerable software, moving laterally with stolen credentials, or tricking users into executing malicious code on their endpoint.
@@ -49,10 +49,10 @@ flowchart LR
 
     u-->|1. submits local admin access request|j
     j-->|2. log request|s
-    j-.->|3.1 start|t
-    j---->|3.2 provide local admin|u    
-    t-.->|4.1 end|j
-    j-->|4.2 revoke local admin|u
+    j-.->|3 start|t
+    j---->|4 provide local admin|u    
+    t-.->|5 end|j
+    j-->|6 revoke local admin|u
 
     style j fill:#9ecea2,stroke:#015407,stroke-width:2px,color:#000000
 ```
@@ -62,3 +62,22 @@ flowchart LR
 |-|-|
 |[Privileges](https://github.com/SAP/macOS-enterprise-privileges)|macOS|
 |[MakeMeAdmin](https://github.com/pseymour/MakeMeAdmin)|Windows|
+
+## Control Framework Mappings
+|Framework|Control ID(s)|
+|-|-|
+|SOX||
+|SOC 2|CC6.1, CC6.2|
+|ISO 27001||
+|NIST CSF 1.1||
+|NIST CSF 2||
+|NIST 800-53 Rev. 5|AC-6(2)|
+|FedRAMP||
+|PCI DSS||
+|HIPAA||
+|GDPR||
+|CCPA||
+|CIS CSC v8|5.4|
+
+## References
+* [Apple @ Work: Privileges for macOS is the open source tool that all Apple IT departments need](https://9to5mac.com/2019/11/16/privileges-app-for-macos/)
